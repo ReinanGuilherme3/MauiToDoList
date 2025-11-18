@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using MauiToDoList.App.Extensions;
 
 namespace MauiToDoList.App
 {
@@ -9,15 +9,7 @@ namespace MauiToDoList.App
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
-
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
+                .AddFonts();
 
             return builder.Build();
         }
