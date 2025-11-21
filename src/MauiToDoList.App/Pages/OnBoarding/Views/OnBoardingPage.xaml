@@ -3,12 +3,19 @@
     x:Class="MauiToDoList.App.Pages.OnBoarding.Views.OnBoardingPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:fontFamily="clr-namespace:MauiToDoList.App.Constants">
+    xmlns:fontFamily="clr-namespace:MauiToDoList.App.Constants"
+    xmlns:viewModel="clr-namespace:MauiToDoList.App.Pages.OnBoarding.ViewModels"
+    x:DataType="viewModel:OnBoardingViewModel">
     <VerticalStackLayout>
         <Label
             FontFamily="{Static fontFamily:FontFamily.POPPINS_BLACK}"
             HorizontalOptions="Center"
             Text="Tela OnBoarding Criada Por Mim!"
             VerticalOptions="Center" />
+
+        <Button
+            Command="{Binding GoToHomePageCommand}"
+            HorizontalOptions="Center"
+            Text="Ir para Home Page" />
     </VerticalStackLayout>
 </ContentPage>

@@ -1,4 +1,5 @@
-﻿using MauiToDoList.App.Extensions;
+﻿using CommunityToolkit.Maui;
+using MauiToDoList.App.Extensions.AppBuilder;
 
 namespace MauiToDoList.App
 {
@@ -7,9 +8,10 @@ namespace MauiToDoList.App
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder
-                .UseMauiApp<App>()
-                .AddFonts();
+            builder.UseMauiApp<App>()
+                .AddFonts()
+                .AddPages()
+                .UseMauiCommunityToolkit();
 
             return builder.Build();
         }

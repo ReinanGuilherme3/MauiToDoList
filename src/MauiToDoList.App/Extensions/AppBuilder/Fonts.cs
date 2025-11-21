@@ -1,10 +1,10 @@
 ﻿using MauiToDoList.App.Constants;
 
-namespace MauiToDoList.App.Extensions;
+namespace MauiToDoList.App.Extensions.AppBuilder;
 
 public static class Fonts
 {
-    public static void AddFonts(this MauiAppBuilder builder)
+    public static MauiAppBuilder AddFonts(this MauiAppBuilder builder)
     {
         builder.ConfigureFonts(fonts =>
         {
@@ -12,5 +12,7 @@ public static class Fonts
             fonts.AddFont("Poppins-Regular.ttf", FontFamily.POPPINS_REGULAR);
             fonts.AddFont("Poppins-Thin.ttf", FontFamily.POPPINS_THIN);
         });
+
+        return builder;
     }
 }
