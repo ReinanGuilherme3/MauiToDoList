@@ -4,9 +4,11 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:fontFamily="clr-namespace:MauiToDoList.App.Constants"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewModel="clr-namespace:MauiToDoList.App.Pages.OnBoarding.ViewModels"
     x:DataType="viewModel:OnBoardingViewModel">
-    <VerticalStackLayout>
+
+    <VerticalStackLayout HeightRequest="100">
         <Label
             FontFamily="{Static fontFamily:FontFamily.POPPINS_BLACK}"
             HorizontalOptions="Center"
@@ -16,6 +18,7 @@
         <Button
             Command="{Binding GoToHomePageCommand}"
             HorizontalOptions="Center"
-            Text="Ir para Home Page" />
+            Text="Ir para Home Page"
+            VerticalOptions="End" />
     </VerticalStackLayout>
 </ContentPage>
